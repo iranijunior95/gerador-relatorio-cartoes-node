@@ -1,5 +1,6 @@
 const state = require('./states');
 const fs = require('fs');
+const fsExtra = require('fs-extra');
 const sharp = require('sharp');
 
 const dadosConfiguracao = state.retornar();
@@ -24,11 +25,21 @@ async function start() {
         return;
     }
 
+    console.log('==================== PROCESSAMENTO DE IMAGENS ====================');
+
     const arquivosDisponiveisParaRedimensionar = verificaImagensNaPastaPrints();
 
     if(arquivosDisponiveisParaRedimensionar.length === 0) {
         console.log('Aviso: Nenhum arquivo nos padroẽs para ser processado!');
         return;
+    }
+
+    if(fs.existsSync('./arquivos/redimensionadas')) {
+        try {
+            await fsExtra.remove('./arquivos/redimensionadas');
+        } catch (error) {
+            console.log(`Erro ao Excluir Registros: ${error}`);
+        }
     }
 
     arquivosDisponiveisParaRedimensionar.forEach(async function(imagens) {

@@ -11,6 +11,7 @@ function salvar(dados) {
 
     console.log('==================== DADOS RELATORIO A SER GERADO ====================');
     console.table(dadosConfiguracao);
+    console.log('\n');
 }
 
 function retornar() {
