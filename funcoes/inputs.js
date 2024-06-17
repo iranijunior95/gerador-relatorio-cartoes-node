@@ -4,7 +4,7 @@ const state = require('./states');
 function start() {
 
     const listaOpcoesRelatorios = ['Gerar Todos', 'Gerar Individual'];
-    const listaCartoes = ['cielo', 'alelo', 'vr', 'sodexo', 'up brasil', 'tricard'];
+    const listaCartoes = ['cielo', 'ben visa vale', 'vr card', 'alelo', 'ticket', 'greencard', 'sodexo', 'up brasil', 'tricard', 'agilli', 'lecard'];
     const listaMeses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
     const dadosConfiguracao = { 
             relatorio: '',

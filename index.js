@@ -1,4 +1,4 @@
-(function() {
+(async function() {
     const funcoes = {
         inputs: require('./funcoes/inputs'),
         imagens: require('./funcoes/imagens')
@@ -16,5 +16,5 @@
     console.log('Ex: CIELO_VISA_LOJA / ALELO_RESTAURANTE');
 
     funcoes.inputs();
-    funcoes.imagens();
+    await funcoes.imagens();
 })();
