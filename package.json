@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "fs-extra": "^11.2.0",
+    "image-to-base64": "^2.2.0",
+    "jspdf": "^2.5.1",
     "pdfkit": "^0.15.0",
     "readline-sync": "^1.4.10",
     "sharp": "^0.33.4"

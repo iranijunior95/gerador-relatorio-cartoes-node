@@ -1,4 +1,5 @@
 (async function() {
+    
     const robos = {
         input: require('./robos/input'),
         imagem: require('./robos/imagem'),
@@ -7,6 +8,6 @@
 
     robos.input();
     await robos.imagem();
-    robos.relatorio();
+    await robos.relatorio();
 })();
 

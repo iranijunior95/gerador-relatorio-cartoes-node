@@ -53,7 +53,7 @@ async function start() {
     }
 
     async function redimensionarImagem(imagem) {
-        const nomeImagem = `${imagem.split('.')[0]}_${state.opcoesMeses.toLocaleUpperCase()}_${state.opcaoAno}.png`;
+        const nomeImagem = `${imagem.split('.')[0]}.png`;
 
         try{
             const imagemRedimensionada = await sharp(`./arquivos/prints/${imagem}`)
